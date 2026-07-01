@@ -1,0 +1,794 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Home | Stratus</title>
+    <link
+      rel="preload"
+      href="./Public/architecture/Cont_1.png"
+      as="image"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="./Font/Panigale-Font/Panigale-SemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./Font/Barlow_Condensed/BarlowCondensed-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="home-page top-hero-page">
+    <header>
+      <a href="./index.html" class="top-corner-logo" aria-label="Stratus Home">
+        <img
+          src="./Public/navbar/logo.png"
+          alt="Stratus logo"
+          class="top-corner-logo-img"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </a>
+      <nav class="navbar" aria-label="Primary">
+        <div class="navbar-leading">
+          <a href="./index.html" class="brand" aria-label="Stratus Home">
+            <img
+              src="./Font/New_images/BG (2).png"
+              alt="Stratus logo"
+              class="brand-logo"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </a>
+          <button
+            type="button"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="site-navigation"
+            aria-label="Open menu"
+          >
+            <span class="nav-toggle-bars" aria-hidden="true">
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+            </span>
+          </button>
+        </div>
+        <div class="nav-backdrop" aria-hidden="true"></div>
+        <div class="nav-right" id="site-navigation">
+          <ul class="nav-links">
+            <li><a href="./de-atelier.html">De Atelier</a></li>
+            <li><a href="./arch_and_intero.html">Architecture and Interior</a></li>
+            <li><a href="./project.html">Projects</a></li>
+          </ul>
+          <a href="./contact.html" class="hero-contact-btn"
+            >Know more <span class="hero-contact-btn-icon" aria-hidden="true">&#8594;</span></a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <section class="home-banner-section" aria-label="Stratus showcase">
+      <div class="home-banner-stage">
+        <div class="home-banner-columns">
+        <div class="home-banner-panel home-banner-panel--static">
+          <img
+            src="./Public/architecture/Cont_1.png"
+            alt="Terracotta decorative screen with lattice and faceted blocks, warm golden backlight"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <div class="home-banner-panel home-banner-panel--static home-banner-panel--center">
+          <img
+            src="./Public/architecture/Cont_2.png"
+            alt="Terracotta architectural screen with geometric lattice and faceted tile patterns"
+            decoding="async"
+            fetchpriority="low"
+           loading="lazy" decoding="async" />
+          <img
+            class="home-banner-center-com"
+            src="./BAnner/logo_com.png"
+            alt="Stratus"
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <div class="home-banner-panel home-banner-panel--cycle" data-home-banner-cycle>
+          <img
+            class="is-active"
+            src="./Public/architecture/Cont_2.png"
+            alt="Terracotta decorative screen — detail two"
+            decoding="async"
+          />
+          <img
+            src="./BAnner/C22935C0-7232-49F1-803F-D63F86BF8FC0.png"
+            alt="Stratus showcase — interior visual"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="./BAnner/IMG_1139.JPG"
+            alt="Stratus showcase — architectural interior"
+            loading="lazy"
+            decoding="async"
+          />
+          <img
+            src="./BAnner/IMG_1545.JPG"
+            alt="Stratus showcase — space and materials"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+      <img
+        class="home-banner-logo"
+        src="./BAnner/logo_stratus.png"
+        alt="Stratus"
+        decoding="async"
+        fetchpriority="low"
+       loading="lazy" decoding="async" />
+      </div>
+    </section>
+
+    <header class="hero">
+      <video
+        class="home-hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none"
+        aria-hidden="true"
+      >
+        <source src="./Public/architecture/Clip_06%20(1)%20(1).mp4" type="video/mp4" />
+      </video>
+      <section class="hero-content">
+        <div class="hero-content-bottom"></div>
+      </section>
+    </header>
+
+    <section class="home-about-redesign" id="about" aria-labelledby="home-about-redesign-heading">
+      <div class="home-about-redesign-inner">
+        <div class="home-about-redesign-layout">
+          <div class="home-about-redesign-content">
+            <p class="home-about-redesign-tag">About Us</p>
+            <h2 id="home-about-redesign-heading">brand philosophy</h2>
+            <p class="home-about-redesign-copy">
+              STRATUS was founded on the belief that architecture should feel honest and inevitable. We
+              do not design for trends. We design for longevity. Every decision is guided by context,
+              climate, material, and human experience.
+            </p>
+          </div>
+          <figure class="home-about-redesign-media">
+            <img
+              src="./Gallary_image/banner/Brand%20Philosophy%20Image.png"
+              alt="Modern interior with floating wooden stairs, brick wall, circular windows, and indoor garden"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-services-redesign" id="services" aria-labelledby="home-services-redesign-heading">
+      <div class="home-services-redesign-inner">
+        <p class="home-services-redesign-tag">
+          <span aria-hidden="true">&#10038;</span>
+          Our Services
+        </p>
+        <h2 id="home-services-redesign-heading">A complete approach to building and designing spaces</h2>
+
+        <div class="home-services-redesign-cards">
+          <article class="home-services-redesign-card">
+            <a href="./arch_and_intero.html" class="home-services-redesign-card-link">
+              <img
+                src="./Gallary_image/Arch_Cover%20Pic.png"
+                alt="Modern residential architecture with layered facade and evening lighting"
+                loading="lazy"
+                decoding="async"
+              />
+              <h3>Architecture and Interior</h3>
+            </a>
+          </article>
+          <article class="home-services-redesign-card">
+            <a href="./de-atelier.html" class="home-services-redesign-card-link">
+              <img
+                src="./Gallary_image/De%20Atelier%20Cover.jpeg"
+                alt="De Atelier interior design studio project with warm ambient lighting"
+                loading="lazy"
+                decoding="async"
+              />
+              <h3>De Atelier</h3>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-process-section" aria-labelledby="home-process-heading">
+      <div class="home-process-inner">
+        <div class="home-process-grid">
+          <header class="home-process-header">
+            <h2 id="home-process-heading">The Process</h2>
+            <p>
+              A complete approach to building and designing spaces
+            </p>
+          </header>
+          <div class="home-process-rule" aria-hidden="true"></div>
+
+          <article class="home-process-card">
+            <img src="./Font/New_images/Container_2.png" alt="Early concept sketches" loading="lazy" decoding="async" />
+            <h3>Concept, sketches</h3>
+            <p>A hand-drawn sketch typically outlines the style and layout of the future interior.</p>
+          </article>
+
+          <article class="home-process-card">
+            <img src="./Font/New_images/Container_3.png" alt="Material and planning board" loading="lazy" decoding="async" />
+            <h3>Design project</h3>
+            <p>Details on color scheme, furniture, lighting placement, and technical layout.</p>
+          </article>
+
+          <article class="home-process-card">
+            <img src="./Font/New_images/Container_4.png" alt="3D interior visualization preview" loading="lazy" decoding="async" />
+            <h3>3D visualization</h3>
+            <p>So that the client can see with his own eyes what he will ultimately receive.</p>
+          </article>
+
+          <article class="home-process-card">
+            <img src="./Font/New_images/Container_5.png" alt="Costing and estimate worksheet" loading="lazy" decoding="async" />
+            <h3>Estimation</h3>
+            <p>The pricing details and the total cost of the customer&apos;s interior design project.</p>
+          </article>
+
+          <article class="home-process-card">
+            <img src="./Font/New_images/Container_6.png" alt="Material board and samples" loading="lazy" decoding="async" />
+            <h3>Materials, etc.</h3>
+            <p>Building materials, components and furniture; everything you need for the interior.</p>
+          </article>
+
+          <article class="home-process-card">
+            <img src="./Font/New_images/Container_7.png" alt="Final supervision on site" loading="lazy" decoding="async" />
+            <h3>Supervision</h3>
+            <p>Supervises the work, making sure that the interior exactly as he intended.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-why-section" aria-labelledby="home-why-heading">
+      <div class="home-why-inner">
+        <div class="home-why-left">
+          <p class="home-why-tag">
+            <span aria-hidden="true">&#10038;</span>
+            Why Stratus
+          </p>
+          <h2 id="home-why-heading">A practice built on clarity, discipline, and long-term thinking</h2>
+
+          <ol class="home-why-list">
+            <li>Experienced Team</li>
+            <li>Reliable Execution</li>
+            <li>Thoughtful Decision Making</li>
+            <li>Enduring Design Approach</li>
+          </ol>
+        </div>
+
+        <div class="home-why-right">
+          <img
+            src="./photos/Mungo/interior%20design%20(1).png"
+            alt="Modern bedroom interior with wood slat feature wall, natural light, and garden view"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="home-each-project-section" aria-labelledby="home-each-project-heading" hidden>
+      <div class="home-each-project-inner">
+        <div class="home-each-project-column">
+          <header class="home-each-project-header">
+            <p class="home-each-project-eyebrow">Selected work</p>
+            <h2 id="home-each-project-heading" class="home-each-project-heading">
+              <span class="home-each-project-heading-line">Each project tells a story</span>
+              <span class="home-each-project-heading-line">through light, material, and</span>
+              <span class="home-each-project-heading-line">carefully considered detail.</span>
+            </h2>
+          </header>
+
+          <div class="home-each-project-overlay">
+            <div class="home-each-project-panel">
+            <div class="home-each-project-progress" role="tablist" aria-label="Project index">
+              <span class="home-each-project-edge" data-each-current-label aria-hidden="true">01</span>
+              <div class="home-each-project-rail">
+                <div class="home-each-project-rail-line" aria-hidden="true">
+                  <span class="home-each-project-rail-fill" data-each-progress-fill></span>
+                </div>
+                <div class="home-each-project-rail-steps">
+                  <button type="button" class="is-active" data-each-step aria-label="Show project 1">01</button>
+                  <button type="button" class="home-each-project-step-dot" data-each-step aria-label="Show project 2"></button>
+                  <button type="button" class="home-each-project-step-dot" data-each-step aria-label="Show project 3"></button>
+                  <button type="button" class="home-each-project-step-dot" data-each-step aria-label="Show project 4"></button>
+                  <button type="button" data-each-step aria-label="Show project 5">05</button>
+                </div>
+              </div>
+              <span class="home-each-project-edge" data-each-count aria-hidden="true">05</span>
+            </div>
+
+            <div class="home-each-project-list">
+              <article class="home-each-project-card is-active" data-each-card>
+                <div class="home-each-project-card-copy">
+                  <h3>Coastal Retreat</h3>
+                  <p>Indiranagar, Bangalore - LH-103</p>
+                  <a href="./gallary.html" class="home-each-project-view">
+                    View <span aria-hidden="true">&#8599;</span>
+                  </a>
+          </div>
+                <img
+                  src="./Public/about/our_ongoing.jpg"
+                  alt="Coastal Retreat project preview"
+                  loading="lazy"
+                  decoding="async"
+                />
+        </article>
+
+              <article class="home-each-project-card" data-each-card>
+                <div class="home-each-project-card-copy">
+                  <h3>Chic Apartment</h3>
+                  <p>Indiranagar, Bangalore - LH-001</p>
+                  <a href="./gallary.html" class="home-each-project-view">
+                    View <span aria-hidden="true">&#8599;</span>
+                  </a>
+                </div>
+                <img
+                  src="./Public/about/on_going.jpg"
+                  alt="Chic Apartment project preview"
+                  loading="lazy"
+            decoding="async"
+          />
+              </article>
+
+              <article class="home-each-project-card" data-each-card>
+                <div class="home-each-project-card-copy">
+                  <h3>Cafe Grey</h3>
+                  <p>Indiranagar, Bangalore - LH-103</p>
+                  <a href="./gallary.html" class="home-each-project-view">
+                    View <span aria-hidden="true">&#8599;</span>
+                  </a>
+                </div>
+                <img
+                  src="./Public/about/vk.png"
+                  alt="Cafe Grey project preview"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </article>
+
+              <article class="home-each-project-card" data-each-card>
+                <div class="home-each-project-card-copy">
+                  <h3>Dongle Desk</h3>
+                  <p>Indiranagar, Bangalore - LH-001</p>
+                  <a href="./gallary.html" class="home-each-project-view">
+                    View <span aria-hidden="true">&#8599;</span>
+                  </a>
+          </div>
+                <img
+                  src="./Public/about/Avk.png"
+                  alt="Dongle Desk project preview"
+                  loading="lazy"
+                  decoding="async"
+                />
+        </article>
+
+              <article class="home-each-project-card" data-each-card>
+                <div class="home-each-project-card-copy">
+                  <h3>Mungo</h3>
+                  <p>Indiranagar, Bangalore - LH-001</p>
+                  <a href="./gallary.html" class="home-each-project-view">
+                    View <span aria-hidden="true">&#8599;</span>
+                  </a>
+                </div>
+                <img
+                  src="./Public/about/Dongle.png"
+                  alt="Mungo project preview"
+                  loading="lazy"
+            decoding="async"
+          />
+              </article>
+            </div>
+
+            <div class="home-each-project-controls">
+              <button type="button" data-each-prev aria-label="Previous project">&#8592;</button>
+              <button type="button" data-each-next aria-label="Next project">&#8594;</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects" hidden>
+      <div class="projects-header">
+        <h2>PROJECTS</h2>
+        <div class="projects-tabs">
+          <button type="button" class="project-tab is-active" data-project-tab="architecture" aria-selected="true">
+            Architecture
+          </button>
+          <button type="button" class="project-tab" data-project-tab="construction" aria-selected="false">
+            Construction
+          </button>
+          <button type="button" class="project-tab" data-project-tab="atelier" aria-selected="false">
+            De Atelier
+          </button>
+        </div>
+      </div>
+
+      <div class="projects-frame">
+        <article class="project-card">
+          <a href="./architecture.html" class="project-card-link" data-project-link>
+            <img
+              src="./Public/image_1.png"
+              alt="Modern cubic residence at night with warm lighting"
+              data-architecture="./Public/image_1.png"
+              data-construction="./photos/31f46916ef019b70a4f6d65cde29441d073dbcdf.jpg"
+              data-atelier="./Public/home_page_section2_image1.png"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="./architecture.html" class="project-card-link" data-project-link>
+            <img
+              src="./Public/image_2.png"
+              alt="Contemporary home at dusk with triangular glass gable"
+              data-architecture="./Public/image_2.png"
+              data-construction="./photos/a538bde789821b3fcfe6ee81c4ede3991243763e.jpg"
+              data-atelier="./Public/home_page_section2_image2.png"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </article>
+        <article class="project-card">
+          <a href="./architecture.html" class="project-card-link" data-project-link>
+            <img
+              src="./Public/image_3.png"
+              alt="Multi-storey modern facade with glass balconies at evening"
+              data-architecture="./Public/image_3.png"
+              data-construction="./photos/fd2b7ba52b4c1572eb223eaf86ee7ea9df76c48c.jpg"
+              data-atelier="./Public/home_page_section2_image3.png"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="gallary-section" id="gallery" hidden>
+      <div class="gallary-header">
+        <h2>GALLERY</h2>
+        <p>A closer look at materials, spatial details, and the evolution of design into built form.</p>
+      </div>
+
+      <div class="gallary-scroll-viewport gallary-scroll-viewport--infinite">
+        <div class="gallary-grid">
+          <article class="gallary-card">
+            <img
+              src="./Public/99cfc03b1894196bd8af33b7e2635199e3bb02eb.png"
+              alt="Cafe with glass block walls, exposed concrete ceiling, terracotta-textured walls, and bouclé chairs"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
+          <article class="gallary-card">
+            <img
+              src="./Public/about/IMG1%20(1).png"
+              alt="Warm-toned interior with layered materials, soft lighting, and contemporary furnishings"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
+          <article class="gallary-card">
+            <img
+              src="./Public/IMG4.png"
+              alt="Cafe interior with textured circular pendant lights, metal slat partition, and lush potted plants"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
+          <article class="gallary-card">
+            <img
+              src="./Public/home_page_section2_image1.png"
+              alt="Residential interior with clean lines, natural light, and layered neutral textures"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
+          <article class="gallary-card">
+            <img
+              src="./Public/home_page_section2_image2.png"
+              alt="Living space with warm neutrals, wood accents, and generous glazing"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
+          <article class="gallary-card">
+            <img
+              src="./Public/home_page_section2_image3.png"
+              alt="Open-plan interior with sculptural lighting and refined material palette"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-article-section" id="latest-article" hidden>
+      <div class="container">
+        <div class="latest-article-header">
+          <h2>THE LATEST ARTICLE</h2>
+          <p>Perspectives on architecture, material thinking, and evolving design approaches.</p>
+        </div>
+
+        <div class="latest-article-grid">
+          <article class="latest-article-card">
+            <div class="latest-article-image-wrap">
+              <img
+                src="./Public/the_largest_article%20(1).jpg"
+                alt="Interior feature with layered copper pendant lighting"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <p>Posuere urna nec tincidunt praesent egestas maecenas.</p>
+            <a href="#" class="latest-article-link">Learn More <span aria-hidden="true">&#8250;</span></a>
+          </article>
+
+          <article class="latest-article-card">
+            <div class="latest-article-image-wrap">
+              <img
+                src="./Public/the_largest_article%20(2).jpg"
+                alt="Modern kitchen with wood island, glass cabinetry, and sculptural lighting"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <p>Posuere urna nec tincidunt praesent egestas maecenas.</p>
+            <a href="#" class="latest-article-link">Learn More <span aria-hidden="true">&#8250;</span></a>
+          </article>
+
+          <article class="latest-article-card">
+            <div class="latest-article-image-wrap">
+              <img
+                src="./Public/the_largest_article%20(3).jpg"
+                alt="Minimal bedroom with artwork, wood accents, and warm accent lighting"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <p>Posuere urna nec tincidunt praesent egestas maecenas.</p>
+            <a href="#" class="latest-article-link">Learn More <span aria-hidden="true">&#8250;</span></a>
+          </article>
+        </div>
+        <div class="latest-article-divider" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="testimonials-section" id="testimonials" hidden>
+      <div class="testimonials-header">
+        <h2>WHAT OUR CLIENTS SAY</h2>
+        <p>Experiences shaped through collaboration, trust, and thoughtful execution.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <img
+            class="testimonial-avatar"
+            src="./Public/navbar/testomonial%20(1).png"
+            alt="John Carter"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3>John Carter</h3>
+          <p>
+            Our living room was completely transformed! The team captured our vision perfectly and
+            exceeded our expectations.
+          </p>
+        </article>
+
+        <article class="testimonial-card">
+          <img
+            class="testimonial-avatar"
+            src="./Public/navbar/testomonial%20(2).png"
+            alt="Sophie Moore"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3>Sophie Moore</h3>
+          <p>
+            Professional and creative! The design process was smooth, and the results are stunning.
+            Highly recommend their services.
+          </p>
+        </article>
+
+        <article class="testimonial-card">
+          <img
+            class="testimonial-avatar"
+            src="./Public/navbar/testomonial%20(3).png"
+            alt="Matt Cannon"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3>Matt Cannon</h3>
+          <p>
+            Their attention to detail and commitment to quality turned our house into a home we love.
+            Outstanding work!
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-faq-section" aria-labelledby="home-faq-heading" data-home-faq>
+      <div class="home-faq-inner">
+        <div class="home-faq-intro">
+          <p class="home-faq-eyebrow">FAQ'S</p>
+          <h2 id="home-faq-heading">Your Questions,<br />Answered</h2>
+          <p class="home-faq-copy">
+            Helpful information designed to guide you through our services and design approach.
+          </p>
+        </div>
+
+        <div class="home-faq-accordion" role="list">
+          <article class="home-faq-item is-open" data-faq-item>
+            <button type="button" class="home-faq-question" data-faq-trigger aria-expanded="true">
+              <span>What services do you offer?</span>
+              <span class="home-faq-icon" aria-hidden="true">&#8722;</span>
+            </button>
+            <div class="home-faq-answer" data-faq-panel>
+              <p>
+                We provide full-service real estate support including property sales, leasing,
+                marketing, investment guidance, and property management.
+              </p>
+            </div>
+          </article>
+
+          <article class="home-faq-item" data-faq-item>
+            <button type="button" class="home-faq-question" data-faq-trigger aria-expanded="false">
+              <span>How do I get started ?</span>
+              <span class="home-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="home-faq-answer" data-faq-panel hidden>
+              <p>
+                Start by sharing your project requirements through our contact page, and our team
+                will schedule a consultation to understand your goals.
+              </p>
+            </div>
+          </article>
+
+          <article class="home-faq-item" data-faq-item>
+            <button type="button" class="home-faq-question" data-faq-trigger aria-expanded="false">
+              <span>Do you work with international clients?</span>
+              <span class="home-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="home-faq-answer" data-faq-panel hidden>
+              <p>
+                Yes, we collaborate with clients globally through structured online coordination and
+                regular design reviews.
+              </p>
+            </div>
+          </article>
+
+          <article class="home-faq-item" data-faq-item>
+            <button type="button" class="home-faq-question" data-faq-trigger aria-expanded="false">
+              <span>What areas do you specialize in?</span>
+              <span class="home-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="home-faq-answer" data-faq-panel hidden>
+              <p>
+                Our expertise includes architecture, interior design, construction planning, and
+                integrated space development.
+              </p>
+            </div>
+          </article>
+
+          <article class="home-faq-item" data-faq-item>
+            <button type="button" class="home-faq-question" data-faq-trigger aria-expanded="false">
+              <span>How long does it take to sell a property?</span>
+              <span class="home-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="home-faq-answer" data-faq-panel hidden>
+              <p>
+                Timelines vary by location and market conditions, but we create a focused strategy
+                to help close as efficiently as possible.
+              </p>
+            </div>
+          </article>
+
+          <article class="home-faq-item" data-faq-item>
+            <button type="button" class="home-faq-question" data-faq-trigger aria-expanded="false">
+              <span>Do you offer investment consulting?</span>
+              <span class="home-faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="home-faq-answer" data-faq-panel hidden>
+              <p>
+                Yes, we support investment decisions with market research, risk analysis, and
+                project-specific feasibility guidance.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer footer-v2">
+      <div class="footer-v2-inner">
+        <div class="footer-v2-top">
+          <div class="footer-v2-brand">
+            <a href="./index.html" class="footer-v2-logo-link" aria-label="Stratus Home">
+              <img src="./Public/navbar/logo.png" alt="Stratus logo" class="footer-v2-logo" loading="lazy" decoding="async" />
+            </a>
+            <p>
+              We design interiors that balance comfort and clarity, crafting spaces defined by
+              purpose, proportion, and lasting character.
+            </p>
+            <div class="footer-v2-social">
+              <a href="#" aria-label="Instagram"><img src="./Public/services/instagram.png" alt="" class="footer-social-icon" loading="lazy" decoding="async" /></a>
+              <a href="#" aria-label="Twitter"><img src="./Public/services/twitter.png" alt="" class="footer-social-icon" loading="lazy" decoding="async" /></a>
+              <a href="#" aria-label="LinkedIn"><img src="./Public/services/linkedin-in.png" alt="" class="footer-social-icon" loading="lazy" decoding="async" /></a>
+            </div>
+          </div>
+
+          <div class="footer-v2-links">
+            <h3>Site</h3>
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+
+          <div class="footer-v2-links">
+            <h3>Legal</h3>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="./terms.html">Terms and Conditions</a>
+          </div>
+
+          <form class="footer-v2-subscribe" action="#" method="post">
+            <label for="footer-email-index" class="sr-only">Email</label>
+            <input id="footer-email-index" type="email" placeholder="Hello@stratus.company" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
+        <img
+          src="./photos/gallary/footter_image.png"
+          alt=""
+          class="footer-v2-wordmark-image"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+
+        <div class="footer-v2-bottom">
+          <p>&copy; 2026, Stratus. All Rights Reserved</p>
+          <p>Site by PINAKKAA</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js" defer></script>
+  </body>
+</html>

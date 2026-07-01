@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Gallery | Stratus</title>
+    <link rel="preload" href="./Font/New_images/gallary.png" as="image" fetchpriority="high" />
+    <link
+      rel="preload"
+      href="./Font/Panigale-Font/Panigale-SemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./Font/Barlow_Condensed/BarlowCondensed-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      /* Gallery page only — ideas-to-life showcase (full-width band) */
+      .gallery-ideas-life {
+        --gallery-ideas-surface: #ffffff;
+        --gallery-ideas-inner-max: 960px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: clamp(28px, 3.5vw, 52px) clamp(20px, 4vw, 40px) clamp(32px, 4vw, 60px);
+        background-color: var(--gallery-ideas-surface);
+        color: #3e2e26;
+      }
+
+      .gallery-ideas-life-inner {
+        width: 100%;
+        max-width: var(--gallery-ideas-inner-max);
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .gallery-ideas-life-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 auto 12px;
+        padding: 5px 14px 5px 9px;
+        border-radius: 999px;
+        font-family: var(--body-font);
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 248, 240, 0.95);
+        background: #4d3a31;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
+
+      .gallery-ideas-life-badge-icon {
+        flex: 0 0 22px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.14);
+        position: relative;
+      }
+
+      .gallery-ideas-life-badge-icon::after {
+        content: "\21BB";
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        line-height: 1;
+        color: rgba(255, 248, 240, 0.95);
+      }
+
+      .gallery-ideas-life-heading {
+        margin: 0 auto clamp(8px, 1.4vw, 14px);
+        max-width: 920px;
+        font-family: var(--heading-font);
+        font-size: clamp(22px, 2.6vw, 34px);
+        line-height: 1.1;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #3e2e26;
+      }
+
+      .gallery-ideas-life-lede {
+        margin: 0 auto;
+        max-width: 720px;
+        font-family: var(--body-font);
+        font-size: clamp(15px, 1.05vw, 18px);
+        line-height: 1.5;
+        text-align: center;
+        color: rgba(62, 46, 38, 0.82);
+      }
+
+      .gallery-ideas-life-media-link {
+        display: block;
+        width: min(100%, var(--gallery-ideas-inner-max));
+        margin: clamp(14px, 2.2vw, 28px) auto 0;
+        text-decoration: none;
+        color: inherit;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 22px 50px rgba(62, 46, 38, 0.14);
+      }
+
+      .gallery-ideas-life-media-link:focus-visible {
+        outline: 2px solid #4d3a31;
+        outline-offset: 4px;
+      }
+
+      .gallery-ideas-life-media {
+        width: 100%;
+        aspect-ratio: 960 / 360;
+        background-color: var(--gallery-ideas-surface);
+      }
+
+      .gallery-ideas-life-media img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .gallery-ideas-life-footer {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: clamp(10px, 1.6vw, 18px);
+        text-align: left;
+        width: 100%;
+      }
+
+      .gallery-ideas-life-project {
+        margin: 0 0 4px;
+        font-family: var(--body-font);
+        font-size: clamp(20px, 2vw, 26px);
+        font-weight: 600;
+        line-height: 1.15;
+        color: #3e2e26;
+      }
+
+      .gallery-ideas-life-tagline {
+        margin: 0;
+        font-family: var(--body-font);
+        font-size: 16px;
+        line-height: 1.45;
+        color: rgba(62, 46, 38, 0.72);
+        max-width: 420px;
+      }
+
+      .gallery-ideas-life-arrow-btn {
+        flex-shrink: 0;
+        box-sizing: border-box;
+        min-width: 44px;
+        min-height: 44px;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        font-family: inherit;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+      }
+
+      .gallery-ideas-life-arrow-btn:hover {
+        opacity: 0.82;
+      }
+
+      .gallery-ideas-life-arrow-btn:focus-visible {
+        outline: 2px solid #4d3a31;
+        outline-offset: 2px;
+      }
+
+      .gallery-ideas-life-arrow-btn img {
+        width: 28px;
+        height: 28px;
+        display: block;
+        object-fit: contain;
+      }
+
+      @media (max-width: 640px) {
+        .gallery-ideas-life-footer {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      /* Gallery page — Explore Recent Projects (masonry two-column) */
+      .gallery-recent-projects {
+        --gallery-recent-surface: #ffffff;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 40px 20px;
+        background-color: var(--gallery-recent-surface);
+        color: #2c3238;
+      }
+
+      .gallery-recent-projects-inner {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .gallery-recent-projects-heading {
+        margin: 0 auto 40px;
+        font-family: var(--heading-font);
+        font-size: clamp(20px, 2.2vw, 28px);
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #4d3a31;
+      }
+
+      .gallery-recent-masonry {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px;
+        align-items: start;
+      }
+
+      .gallery-recent-col {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .gallery-recent-card {
+        width: 100%;
+      }
+
+      .gallery-recent-card-inner {
+        background: transparent;
+      }
+
+      .gallery-recent-card-media {
+        display: block;
+        width: 100%;
+        border-radius: 6px;
+        overflow: hidden;
+        background: var(--gallery-recent-surface);
+        box-shadow: 0 8px 22px rgba(45, 36, 30, 0.1);
+      }
+
+      .gallery-recent-card-media--tall {
+        height: 380px;
+      }
+
+      .gallery-recent-card-media--landscape {
+        height: 200px;
+      }
+
+      .gallery-recent-card-media--wide {
+        height: 200px;
+      }
+
+      .gallery-recent-card-media--square {
+        height: 380px;
+      }
+
+      .gallery-recent-card-media img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .gallery-recent-card-body {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 12px;
+        min-height: 48px;
+        text-align: left;
+      }
+
+      .gallery-recent-card-copy {
+        min-width: 0;
+        flex: 1;
+        min-height: 48px;
+      }
+
+      .gallery-recent-card-title {
+        margin: 0 0 4px;
+        font-family: var(--body-font);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #1f2933;
+      }
+
+      .gallery-recent-card-desc {
+        margin: 0;
+        font-family: var(--body-font);
+        font-size: 13px;
+        line-height: 1.4;
+        color: rgba(31, 41, 51, 0.78);
+        max-width: 28ch;
+      }
+
+      .gallery-recent-card-next {
+        flex-shrink: 0;
+        box-sizing: border-box;
+        min-width: 44px;
+        min-height: 44px;
+        width: auto;
+        height: auto;
+        margin-top: 0;
+        margin-inline: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        font-family: inherit;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        transition: opacity 0.2s ease;
+      }
+
+      .gallery-recent-card-next:hover {
+        opacity: 0.82;
+      }
+
+      .gallery-recent-card-next:focus-visible {
+        outline: 2px solid #4d3a31;
+        outline-offset: 2px;
+      }
+
+      .gallery-recent-card-next img {
+        width: 18px;
+        height: 18px;
+        display: block;
+        object-fit: contain;
+      }
+
+      @media (max-width: 720px) {
+        .gallery-recent-masonry {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .gallery-recent-col {
+          gap: 20px;
+        }
+
+        .gallery-recent-card-media--tall,
+        .gallery-recent-card-media--square {
+          height: 320px;
+        }
+
+        .gallery-recent-card-media--landscape,
+        .gallery-recent-card-media--wide {
+          height: 190px;
+        }
+
+        .gallery-recent-card-desc {
+          max-width: none;
+        }
+
+        .gallery-recent-card-body,
+        .gallery-recent-card-copy {
+          min-height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="top-hero-page gallery-page">
+    <header>
+      <a href="./index.html" class="top-corner-logo" aria-label="Stratus Home">
+        <img src="./Public/navbar/logo.png" alt="Stratus logo" class="top-corner-logo-img" fetchpriority="high" decoding="async" />
+      </a>
+      <nav class="navbar" aria-label="Primary">
+        <div class="navbar-leading">
+          <a href="./index.html" class="brand" aria-label="Stratus Home">
+            <img
+              src="./Font/New_images/BG (2).png"
+              alt="Stratus logo"
+              class="brand-logo"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </a>
+          <button
+            type="button"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="site-navigation"
+            aria-label="Open menu"
+          >
+            <span class="nav-toggle-bars" aria-hidden="true">
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+              <span class="nav-toggle-bar"></span>
+            </span>
+          </button>
+        </div>
+        <div class="nav-backdrop" aria-hidden="true"></div>
+        <div class="nav-right" id="site-navigation">
+          <ul class="nav-links">
+            <li><a href="./de-atelier.html">De Atelier</a></li>
+            <li><a href="./arch_and_intero.html">Architecture and Interior</a></li>
+            <li><a href="./project.html">Projects</a></li>
+          </ul>
+          <a href="./contact.html" class="hero-contact-btn"
+            >Know more <span class="hero-contact-btn-icon" aria-hidden="true">&#8594;</span></a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="architecture-hero architecture-hero--gallery page-hero">
+        <div class="page-hero-content"></div>
+      </section>
+
+      <section class="gallery-ideas-life" aria-labelledby="gallery-ideas-life-heading" data-gallery-ideas-life>
+        <div class="gallery-ideas-life-inner">
+          <p class="gallery-ideas-life-badge">
+            <span class="gallery-ideas-life-badge-icon" aria-hidden="true"></span>
+            Gallery
+          </p>
+          <h2 id="gallery-ideas-life-heading" class="gallery-ideas-life-heading">
+            We Bring Ideas To Life From Design To Creation
+          </h2>
+          <p class="gallery-ideas-life-lede" data-ideas-lede>
+            Our work embodies our vision by transforming innovative ideas into reality. From concept to final
+            creation, we craft each project with meticulous attention to detail, reflecting our commitment to
+            excellence and creativity.
+          </p>
+          <a class="gallery-ideas-life-media-link" href="#gallery-projects-showcase-heading">
+            <div class="gallery-ideas-life-media">
+              <img
+                data-ideas-image
+                src="./Font/New_images/A/Image%20Wrap.png"
+                alt="Mungo cafe counter with warm orange tile front, illuminated signage, and curated retail shelving"
+                loading="lazy"
+                decoding="async"
+                width="960"
+                height="360"
+              />
+            </div>
+          </a>
+          <div class="gallery-ideas-life-footer">
+            <div>
+              <p class="gallery-ideas-life-project" data-ideas-project>Mungo</p>
+              <p class="gallery-ideas-life-tagline" data-ideas-tagline>Modern cafe redesigned for cozy city</p>
+            </div>
+            <button
+              type="button"
+              class="gallery-ideas-life-arrow-btn"
+              data-ideas-next
+              aria-label="Show next featured image"
+            >
+              <img
+                src="./Font/New_images/A/Container%20(3).png"
+                alt=""
+                width="28"
+                height="28"
+                decoding="async"
+               loading="lazy" decoding="async" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-recent-projects" aria-labelledby="gallery-projects-showcase-heading">
+        <div class="gallery-recent-projects-inner">
+          <h2 id="gallery-projects-showcase-heading" class="gallery-recent-projects-heading">
+            Explore Our Recent Projects
+          </h2>
+
+          <div class="gallery-recent-masonry">
+            <div class="gallery-recent-col">
+              <article class="gallery-recent-card" data-recent-project-card data-recent-set="0">
+                <div class="gallery-recent-card-inner">
+                  <div class="gallery-recent-card-media gallery-recent-card-media--tall">
+                    <img
+                      data-recent-img
+                      src="./photos/gallary/Travelopia%201.0.png"
+                      alt="Project image: Travelopia 1.0"
+                      loading="lazy"
+                      decoding="async"
+                      width="600"
+                      height="800"
+                    />
+                  </div>
+                  <div class="gallery-recent-card-body">
+                    <div class="gallery-recent-card-copy">
+                      <h3 class="gallery-recent-card-title" data-recent-title>Travelopia 1.0</h3>
+                      <p class="gallery-recent-card-desc" data-recent-desc>Travelopia 1.0</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="gallery-recent-card-next"
+                      data-recent-next
+                      aria-label="Show next photo for Café Aura"
+                    >
+                      <img src="./Font/New_images/A/Container%20(3).png" alt="" width="18" height="18" decoding="async"  loading="lazy" decoding="async" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="gallery-recent-card" data-recent-project-card data-recent-set="2">
+                <div class="gallery-recent-card-inner">
+                  <div class="gallery-recent-card-media gallery-recent-card-media--wide">
+                    <img
+                      data-recent-img
+                      src="./photos/gallary/Dongle_desk.png"
+                      alt="Project image: Dongle Desk"
+                      loading="lazy"
+                      decoding="async"
+                      width="800"
+                      height="400"
+                    />
+                  </div>
+                  <div class="gallery-recent-card-body">
+                    <div class="gallery-recent-card-copy">
+                      <h3 class="gallery-recent-card-title" data-recent-title>Dongle Desk</h3>
+                      <p class="gallery-recent-card-desc" data-recent-desc>Dongle Desk</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="gallery-recent-card-next"
+                      data-recent-next
+                      aria-label="Show next photo for The Minimal HQ"
+                    >
+                      <img src="./Font/New_images/A/Container%20(3).png" alt="" width="18" height="18" decoding="async"  loading="lazy" decoding="async" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="gallery-recent-card" data-recent-project-card data-recent-set="4">
+                <div class="gallery-recent-card-inner">
+                  <div class="gallery-recent-card-media gallery-recent-card-media--tall">
+                    <img
+                      data-recent-img
+                      src="./photos/gallary/caffe_grey.png"
+                      alt="Project image: Caffe Grey"
+                      loading="lazy"
+                      decoding="async"
+                      width="600"
+                      height="800"
+                    />
+                  </div>
+                  <div class="gallery-recent-card-body">
+                    <div class="gallery-recent-card-copy">
+                      <h3 class="gallery-recent-card-title" data-recent-title>Caffe Grey</h3>
+                      <p class="gallery-recent-card-desc" data-recent-desc>Caffe Grey</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="gallery-recent-card-next"
+                      data-recent-next
+                      aria-label="Show next photo for Maison Flora"
+                    >
+                      <img src="./Font/New_images/A/Container%20(3).png" alt="" width="18" height="18" decoding="async"  loading="lazy" decoding="async" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="gallery-recent-col">
+              <article class="gallery-recent-card" data-recent-project-card data-recent-set="1">
+                <div class="gallery-recent-card-inner">
+                  <div class="gallery-recent-card-media gallery-recent-card-media--landscape">
+                    <img
+                      data-recent-img
+                      src="./photos/gallary/Mahadev_residency.png"
+                      alt="Project image: Mahadev Residency"
+                      loading="lazy"
+                      decoding="async"
+                      width="800"
+                      height="480"
+                    />
+                  </div>
+                  <div class="gallery-recent-card-body">
+                    <div class="gallery-recent-card-copy">
+                      <h3 class="gallery-recent-card-title" data-recent-title>Mahadev Residency</h3>
+                      <p class="gallery-recent-card-desc" data-recent-desc>Mahadev Residency</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="gallery-recent-card-next"
+                      data-recent-next
+                      aria-label="Show next photo for Scandi Haven"
+                    >
+                      <img src="./Font/New_images/A/Container%20(3).png" alt="" width="18" height="18" decoding="async"  loading="lazy" decoding="async" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="gallery-recent-card" data-recent-project-card data-recent-set="3">
+                <div class="gallery-recent-card-inner">
+                  <div class="gallery-recent-card-media gallery-recent-card-media--tall">
+                    <img
+                      data-recent-img
+                      src="./photos/gallary/Naspers.png"
+                      alt="Project image: Naspers"
+                      loading="lazy"
+                      decoding="async"
+                      width="600"
+                      height="800"
+                    />
+                  </div>
+                  <div class="gallery-recent-card-body">
+                    <div class="gallery-recent-card-copy">
+                      <h3 class="gallery-recent-card-title" data-recent-title>Naspers</h3>
+                      <p class="gallery-recent-card-desc" data-recent-desc>Naspers</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="gallery-recent-card-next"
+                      data-recent-next
+                      aria-label="Show next photo for Studio Sync"
+                    >
+                      <img src="./Font/New_images/A/Container%20(3).png" alt="" width="18" height="18" decoding="async"  loading="lazy" decoding="async" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="gallery-recent-card" data-recent-project-card data-recent-set="5">
+                <div class="gallery-recent-card-inner">
+                  <div class="gallery-recent-card-media gallery-recent-card-media--square">
+                    <img
+                      data-recent-img
+                      src="./photos/gallary/Travelopia%202.0.png"
+                      alt="Project image: Travelopia 2.0"
+                      loading="lazy"
+                      decoding="async"
+                      width="640"
+                      height="640"
+                    />
+                  </div>
+                  <div class="gallery-recent-card-body">
+                    <div class="gallery-recent-card-copy">
+                      <h3 class="gallery-recent-card-title" data-recent-title>Travelopia 2.0</h3>
+                      <p class="gallery-recent-card-desc" data-recent-desc>Travelopia 2.0</p>
+                    </div>
+                    <button
+                      type="button"
+                      class="gallery-recent-card-next"
+                      data-recent-next
+                      aria-label="Show next photo for The Zen Retreat"
+                    >
+                      <img src="./Font/New_images/A/Container%20(3).png" alt="" width="18" height="18" decoding="async"  loading="lazy" decoding="async" />
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="gallery-page-section"
+        hidden
+        aria-label="Work gallery"
+        data-gallery-categories
+      >
+        <div class="gallery-page-inner">
+          <div class="gallery-page-tabs" role="tablist" aria-label="Gallery categories">
+            <button
+              type="button"
+              class="gallery-page-tab is-active"
+              role="tab"
+              id="gallery-tab-interior"
+              aria-selected="true"
+              aria-controls="gallery-panel-interior"
+              data-gallery-tab="interior"
+            >
+              Interior
+            </button>
+            <button
+              type="button"
+              class="gallery-page-tab"
+              role="tab"
+              id="gallery-tab-architecture"
+              aria-selected="false"
+              aria-controls="gallery-panel-architecture"
+              data-gallery-tab="architecture"
+            >
+              Architecture
+            </button>
+            <button
+              type="button"
+              class="gallery-page-tab"
+              role="tab"
+              id="gallery-tab-construction"
+              aria-selected="false"
+              aria-controls="gallery-panel-construction"
+              data-gallery-tab="construction"
+            >
+              Construction
+            </button>
+          </div>
+
+          <div class="gallery-page-panels">
+            <div
+              class="gallery-page-panel"
+              id="gallery-panel-interior"
+              role="tabpanel"
+              aria-labelledby="gallery-tab-interior"
+              data-gallery-panel="interior"
+            >
+              <div class="gallery-page-grid">
+                <div class="gallery-page-row gallery-page-row--end" role="presentation">
+                  <figure class="gallery-page-item">
+                    <img
+                      src="./Public/hero/Rectangle%20(4).png"
+                      alt="Open-plan office with teal walls, wood desks, concrete ceiling, and windows to greenery"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img
+                      src="./Public/hero/Rectangle%20(5).png"
+                      alt="Workspace with concrete wall, terracotta accent, wood desks, and geometric screen"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img
+                      src="./Public/hero/Rectangle%20(6).png"
+                      alt="Compact kitchen and breakfast bar with wood counter, stools, and large window to trees"
+                      loading="lazy"
+                    />
+                  </figure>
+                </div>
+                <div class="gallery-page-row gallery-page-row--start" role="presentation">
+                  <figure class="gallery-page-item">
+                    <img
+                      src="./Public/hero/Rectangle%20(7).png"
+                      alt="Two people in a modern meeting booth with concrete wall and wood-slat ceiling"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img
+                      src="./Public/hero/Rectangle%20(8).png"
+                      alt="Bright open office with lounge sofa, white desks, and floor-to-ceiling windows"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img
+                      src="./Public/hero/Rectangle%20(9).png"
+                      alt="Twin glass meeting pods with wood desks, monitors, and patterned yellow carpet"
+                      loading="lazy"
+                    />
+                  </figure>
+                </div>
+                <div class="gallery-page-row gallery-page-row--end" role="presentation">
+                  <figure class="gallery-page-item">
+                    <img
+                      src="./Public/hero/Rectangle%20(10).png"
+                      alt="Cafe with exposed brick, patterned tile floor, and glass doors to a palm-lined terrace"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img
+                      src="./Public/hero/Rectangle%20(11).png"
+                      alt="Dining room with marble table, patterned banquette, and sliding doors to a garden"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img
+                      src="./Public/hero/Rectangle%20(12).png"
+                      alt="Industrial cafe with brick wall, white chairs, wood tables, and Edison pendant lights"
+                      loading="lazy"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="gallery-page-panel"
+              id="gallery-panel-architecture"
+              role="tabpanel"
+              aria-labelledby="gallery-tab-architecture"
+              data-gallery-panel="architecture"
+              hidden
+            >
+              <div class="gallery-page-grid">
+                <div class="gallery-page-row gallery-page-row--end" role="presentation">
+                  <figure class="gallery-page-item">
+                    <img src="./Public/Articture__page_hero_section.png" alt="Architecture hero composition" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/architecture/Rectangle%2043%20(1).png" alt="Architectural facade study" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/architecture/Image%20Placeholder.png" alt="Architecture visualization placeholder" loading="lazy" />
+                  </figure>
+                </div>
+                <div class="gallery-page-row gallery-page-row--start" role="presentation">
+                  <figure class="gallery-page-item">
+                    <img src="./Public/313fc7585f39b443fe92c3760dff362f65dee332.png" alt="Modern building exterior with warm evening light" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/about/our_ongoing.jpg" alt="Brutalist waterside building at dusk" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/about/on_going.jpg" alt="Contemporary building with interior glow" loading="lazy" />
+                  </figure>
+                </div>
+                <div class="gallery-page-row gallery-page-row--end" role="presentation">
+                  <figure class="gallery-page-item">
+                    <img src="./Public/Our_philosophy.png" alt="Interior architecture with crafted lighting" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img
+                      src="./Public/about/Secession%20in%20a%20contemporary%20setting%20optimized%20for%20modern%20living%20style..png"
+                      alt="Contemporary living space with sculptural forms"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/99cfc03b1894196bd8af33b7e2635199e3bb02eb.png" alt="Designed interior with bold color and form" loading="lazy" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="gallery-page-panel"
+              id="gallery-panel-construction"
+              role="tabpanel"
+              aria-labelledby="gallery-tab-construction"
+              data-gallery-panel="construction"
+              hidden
+            >
+              <div class="gallery-page-grid">
+                <div class="gallery-page-row gallery-page-row--end" role="presentation">
+                  <figure class="gallery-page-item">
+                    <img src="./Public/Construction_page_hero_section.png" alt="Construction site and structure overview" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/AAsection__3%20(1).jpg" alt="Construction progress and building shell" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/AAsection__3%20(2).jpg" alt="On-site construction and materials" loading="lazy" />
+                  </figure>
+                </div>
+                <div class="gallery-page-row gallery-page-row--start" role="presentation">
+                  <figure class="gallery-page-item">
+                    <img src="./Public/services/Rectangle%20(3).png" alt="Commercial build-out and interior structure" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/services/imagess%20(1).png" alt="Construction and finished interior transition" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/services/imagess%20(2).png" alt="Built environment and spatial volume" loading="lazy" />
+                  </figure>
+                </div>
+                <div class="gallery-page-row gallery-page-row--end" role="presentation">
+                  <figure class="gallery-page-item">
+                    <img src="./Public/container_1.png" alt="Project container visualization" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/container_3.png" alt="Structural and layout study" loading="lazy" />
+                  </figure>
+                  <figure class="gallery-page-item">
+                    <img src="./Public/about/Dongle.png" alt="Commercial interior build with signage and facade" loading="lazy" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-cta-banner services-cta-banner--architecture" aria-labelledby="gallery-cta-heading">
+        <div class="services-cta-banner-inner">
+          <div class="services-cta-banner-card">
+            <div class="services-cta-banner-visual">
+              <div class="services-cta-banner-frame">
+                <img
+                  src="./Public/about/f8b6249a1841e23e438602fdc15b81b5879e2e06.png"
+                  alt="Warm cafe interior framed by glowing glass block columns, bouclé chairs, and lush greenery" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="services-cta-banner-content">
+              <h2 id="gallery-cta-heading" class="services-cta-banner-title">
+                Blending creativity and functionality in every design
+              </h2>
+              <a href="#" class="services-cta-banner-btn">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer footer-v2">
+      <div class="footer-v2-inner">
+        <div class="footer-v2-top">
+          <div class="footer-v2-brand">
+            <a href="./index.html" class="footer-v2-logo-link" aria-label="Stratus Home">
+              <img src="./Public/navbar/logo.png" alt="Stratus logo" class="footer-v2-logo" loading="lazy" decoding="async" />
+            </a>
+            <p>
+              We design interiors that balance comfort and clarity, crafting spaces defined by
+              purpose, proportion, and lasting character.
+            </p>
+            <div class="footer-v2-social">
+              <a href="#" aria-label="Instagram"><img src="./Public/services/instagram.png" alt="" class="footer-social-icon" loading="lazy" decoding="async" /></a>
+              <a href="#" aria-label="Twitter"><img src="./Public/services/twitter.png" alt="" class="footer-social-icon" loading="lazy" decoding="async" /></a>
+              <a href="#" aria-label="LinkedIn"><img src="./Public/services/linkedin-in.png" alt="" class="footer-social-icon" loading="lazy" decoding="async" /></a>
+            </div>
+          </div>
+          <div class="footer-v2-links">
+            <h3>Site</h3>
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+          <div class="footer-v2-links">
+            <h3>Legal</h3>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="./terms.html">Terms and Conditions</a>
+          </div>
+          <form class="footer-v2-subscribe" action="#" method="post">
+            <label for="footer-email-gallery" class="sr-only">Email</label>
+            <input id="footer-email-gallery" type="email" placeholder="Hello@stratus.company" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <img
+          src="./photos/gallary/footter_image.png"
+          alt=""
+          class="footer-v2-wordmark-image"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+        <div class="footer-v2-bottom">
+          <p>&copy; 2026, Stratus. All Rights Reserved</p>
+          <p>Site by PINAKKAA</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+    <script>
+      (function initGalleryIdeasLifeSlider() {
+        const root = document.querySelector("[data-gallery-ideas-life]");
+        if (!root) return;
+
+        const imageEl = root.querySelector("[data-ideas-image]");
+        const ledeEl = root.querySelector("[data-ideas-lede]");
+        const projectEl = root.querySelector("[data-ideas-project]");
+        const taglineEl = root.querySelector("[data-ideas-tagline]");
+        const nextBtn = root.querySelector("[data-ideas-next]");
+        if (!imageEl || !ledeEl || !projectEl || !taglineEl || !nextBtn) return;
+
+        const slides = [
+          {
+            src: "./Font/New_images/A/Image%20Wrap.png",
+            alt: "Mungo cafe counter with warm orange tile front, illuminated signage, and curated retail shelving",
+            project: "Mungo",
+            tagline: "Modern cafe redesigned for cozy city",
+            lede:
+              "Our work embodies our vision by transforming innovative ideas into reality. From concept to final creation, we craft each project with meticulous attention to detail, reflecting our commitment to excellence and creativity.",
+          },
+          {
+            src: "./photos/Mungo/Image%20(1).png",
+            alt: "Interior cafe seating with warm materials",
+            project: "Mungo Seating",
+            tagline: "Comfort-focused dining crafted for everyday use",
+            lede:
+              "Every layout decision is rooted in functionality and atmosphere. We shape seating, circulation, and lighting to make spaces intuitive, welcoming, and commercially effective.",
+          },
+          {
+            src: "./photos/Mungo/Image%20(2).png",
+            alt: "Dining space with natural light and wood textures",
+            project: "Mungo Dining",
+            tagline: "Natural textures paired with durable detailing",
+            lede:
+              "From materials to finishes, we balance character with long-term performance. The result is a design language that feels warm, refined, and built to last.",
+          },
+          {
+            src: "./photos/Mungo/Imagee.png",
+            alt: "Modern dining area with patterned booth and garden view",
+            project: "Mungo Lounge",
+            tagline: "A relaxed corner for social and daily moments",
+            lede:
+              "We compose each zone with purpose, ensuring visual continuity across the project while tailoring each corner to the way people gather, work, and unwind.",
+          },
+        ];
+
+        let index = 0;
+
+        function render(i) {
+          const slide = slides[i];
+          imageEl.src = slide.src;
+          imageEl.alt = slide.alt;
+          projectEl.textContent = slide.project;
+          taglineEl.textContent = slide.tagline;
+          ledeEl.textContent = slide.lede;
+        }
+
+        nextBtn.addEventListener("click", () => {
+          index = (index + 1) % slides.length;
+          render(index);
+        });
+      })();
+
+      (function initGalleryRecentProjectCards() {
+        const cardSlideSets = [
+          [
+            {
+              src: "./photos/gallary/Travelopia%201.0.png",
+              alt: "Project image: Travelopia 1.0",
+              desc: "Travelopia 1.0",
+            },
+          ],
+          [
+            {
+              src: "./photos/gallary/Mahadev_residency.png",
+              alt: "Project image: Mahadev Residency",
+              desc: "Mahadev Residency",
+            },
+          ],
+          [
+            {
+              src: "./photos/gallary/Dongle_desk.png",
+              alt: "Project image: Dongle Desk",
+              desc: "Dongle Desk",
+            },
+          ],
+          [
+            {
+              src: "./photos/gallary/Naspers.png",
+              alt: "Project image: Naspers",
+              desc: "Naspers",
+            },
+          ],
+          [
+            {
+              src: "./photos/gallary/caffe_grey.png",
+              alt: "Project image: Caffe Grey",
+              desc: "Caffe Grey",
+            },
+          ],
+          [
+            {
+              src: "./photos/gallary/Travelopia%202.0.png",
+              alt: "Project image: Travelopia 2.0",
+              desc: "Travelopia 2.0",
+            },
+          ],
+        ];
+
+        const cards = document.querySelectorAll("[data-recent-project-card]");
+        cards.forEach((card) => {
+          const setIndex = Number.parseInt(card.getAttribute("data-recent-set") || "0", 10);
+          const slides = cardSlideSets[setIndex];
+          if (!slides || !slides.length) return;
+
+          const img = card.querySelector("[data-recent-img]");
+          const descEl = card.querySelector("[data-recent-desc]");
+          const btn = card.querySelector("[data-recent-next]");
+          if (!img || !descEl || !btn) return;
+
+          let index = 0;
+
+          function applySlide(idx) {
+            const s = slides[idx];
+            img.src = s.src;
+            img.alt = s.alt;
+            descEl.textContent = s.desc;
+          }
+
+          btn.addEventListener("click", () => {
+            index = (index + 1) % slides.length;
+            applySlide(index);
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

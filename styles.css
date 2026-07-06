@@ -1181,7 +1181,7 @@ body.home-page .home-faq-section {
   --home-process-gap-x: 24px;
 }
 
-/* Header spans row 1; rule row 2; five cards in rows 3–4 */
+/* Header spans row 1; rule row 2; six cards in rows 3–4 */
 .home-process-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1296,7 +1296,7 @@ body.home-page .home-faq-section {
     margin: clamp(12px, 2vw, 20px) 0 clamp(18px, 2.5vw, 28px);
   }
 
-  /* Five cards in two rows below full-width rule */
+  /* Six cards in two rows below full-width rule */
   .home-process-grid > .home-process-card:nth-child(3) {
     grid-column: 1;
     grid-row: 3;
@@ -1319,6 +1319,11 @@ body.home-page .home-faq-section {
 
   .home-process-grid > .home-process-card:nth-child(7) {
     grid-column: 2;
+    grid-row: 4;
+  }
+
+  .home-process-grid > .home-process-card:nth-child(8) {
+    grid-column: 3;
     grid-row: 4;
   }
 }
@@ -1348,6 +1353,10 @@ body.home-page .home-faq-section {
   font-size: 16px;
   line-height: 1.3;
   color: rgba(241, 231, 220, 0.78);
+}
+
+.home-process-nowrap {
+  white-space: nowrap;
 }
 
 .home-why-section {

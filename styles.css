@@ -1181,7 +1181,7 @@ body.home-page .home-faq-section {
   --home-process-gap-x: 24px;
 }
 
-/* Header spans row 1; rule row 2; six cards in rows 3–4 */
+/* Header spans row 1; rule row 2; five cards in rows 3–4 */
 .home-process-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1296,7 +1296,7 @@ body.home-page .home-faq-section {
     margin: clamp(12px, 2vw, 20px) 0 clamp(18px, 2.5vw, 28px);
   }
 
-  /* Six cards in two rows below full-width rule */
+  /* Five cards in two rows below full-width rule */
   .home-process-grid > .home-process-card:nth-child(3) {
     grid-column: 1;
     grid-row: 3;
@@ -1321,16 +1321,12 @@ body.home-page .home-faq-section {
     grid-column: 2;
     grid-row: 4;
   }
-
-  .home-process-grid > .home-process-card:nth-child(8) {
-    grid-column: 3;
-    grid-row: 4;
-  }
 }
 
 .home-process-card img {
   width: 100%;
-  height: 90px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   display: block;
@@ -2874,6 +2870,26 @@ body.home-page .home-faq-section {
   display: block;
   object-fit: cover;
   object-position: center;
+}
+
+.arch-intero-page .architecture-intro-section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.arch-intero-page .architecture-intro-inner {
+  padding-inline: clamp(20px, 4vw, 24px);
+}
+
+.arch-intero-page .architecture-intro-lede {
+  margin-bottom: clamp(28px, 4vw, 36px);
+}
+
+.arch-intero-page .architecture-intro-media {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
 }
 
 @media (max-width: 768px) {
@@ -9577,7 +9593,11 @@ body.portfolio-panel-lightbox-open {
   }
 
   .home-process-card img {
-    height: 86px;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .home-process-card h3 {
@@ -9813,6 +9833,16 @@ body.portfolio-panel-lightbox-open {
   }
 
   .architecture-intro-section {
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+
+  .arch-intero-page .architecture-intro-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .arch-intero-page .architecture-intro-inner {
     padding-left: max(20px, env(safe-area-inset-left, 0px));
     padding-right: max(20px, env(safe-area-inset-right, 0px));
   }

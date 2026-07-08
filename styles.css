@@ -9601,6 +9601,13 @@ body.portfolio-panel-lightbox-open {
     gap: 14px;
   }
 
+  .home-process-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   .home-process-card img {
     aspect-ratio: 1 / 1;
     width: 100%;
@@ -9611,11 +9618,16 @@ body.portfolio-panel-lightbox-open {
 
   .home-process-card h3 {
     font-size: clamp(20px, 5.3vw, 28px);
+    text-align: center;
+    width: 100%;
   }
 
   .home-process-card p {
     font-size: 15px;
-    max-width: none;
+    max-width: 34ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .home-why-section {

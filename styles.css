@@ -3395,9 +3395,9 @@ body.home-page .home-faq-section {
   width: 100%;
   border-radius: 12px;
   overflow: hidden;
-  background: #f2ede8;
+  background: #ffffff;
   display: block;
-  padding: clamp(4px, 1vw, 8px);
+  padding: 2px;
   box-sizing: border-box;
 }
 
@@ -3745,8 +3745,8 @@ body.arch-intero-drawer-scroll-locked {
   min-height: clamp(300px, 50vh, 580px);
   border-radius: 12px;
   overflow: hidden;
-  background: #f2ede8;
-  padding: clamp(10px, 1.8vw, 18px);
+  background: #ffffff;
+  padding: 2px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -3866,7 +3866,7 @@ body.arch-intero-drawer-scroll-locked {
 
   .arch-intero-drawer__grid .arch-intero-projects-card-panel-figure {
     min-height: clamp(200px, 36dvh, 340px);
-    padding: clamp(8px, 2vw, 12px);
+    padding: 2px;
     border-radius: 10px;
   }
 
@@ -4493,14 +4493,14 @@ body.portfolio-panel-lightbox-open {
 
 .project-page .project-portfolio-section .arch-intero-projects-card-panel-figure {
   margin: 0;
-  padding: 0;
+  padding: 2px;
   min-width: 0;
   width: 100%;
   aspect-ratio: 4 / 3;
   min-height: clamp(88px, 12vw, 165px);
   border-radius: 10px;
   overflow: hidden;
-  background: #e8e2dc;
+  background: #ffffff;
   display: block;
   position: relative;
 }
@@ -7031,14 +7031,14 @@ body.portfolio-panel-lightbox-open {
 
 .interior-page .de-atelier-gargi-portfolio .arch-intero-projects-card-panel-figure {
   margin: 0;
-  padding: 0;
+  padding: 2px;
   min-width: 0;
   width: 100%;
   aspect-ratio: 4 / 3;
   min-height: clamp(118px, 17vw, 220px);
   border-radius: 10px;
   overflow: hidden;
-  background: #e8e2dc;
+  background: #ffffff;
   display: block;
   position: relative;
 }

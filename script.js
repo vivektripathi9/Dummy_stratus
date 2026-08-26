@@ -2180,6 +2180,7 @@ if (latestRoot) {
 
     document.querySelectorAll("video.home-hero-video, video.page-hero-video").forEach((video) => {
       if (video.dataset.heroVideoReady === "1") return;
+
       if (saveData || slowNet) {
         video.removeAttribute("autoplay");
         return;
@@ -2188,11 +2189,39 @@ if (latestRoot) {
       const loadAndPlay = () => {
         if (video.dataset.heroVideoReady === "1") return;
         video.dataset.heroVideoReady = "1";
-        video.preload = "auto";
-        const playPromise = video.play();
-        if (playPromise && typeof playPromise.catch === "function") {
-          playPromise.catch(() => {});
+
+        const source = video.querySelector("source");
+        if (source?.getAttribute("src") && !video.getAttribute("src")) {
+          video.src = source.getAttribute("src");
         }
+
+        video.muted = true;
+        video.playsInline = true;
+        video.setAttribute("playsinline", "");
+        video.preload = "auto";
+
+        const tryPlay = () => {
+          const playPromise = video.play();
+          if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(() => {
+              window.setTimeout(() => {
+                video.play()?.catch(() => {});
+              }, 250);
+            });
+          }
+        };
+
+        const onCanPlay = () => {
+          video.removeEventListener("canplay", onCanPlay);
+          tryPlay();
+        };
+        video.addEventListener("canplay", onCanPlay);
+        try {
+          video.load();
+        } catch {
+          /* ignore */
+        }
+        if (video.readyState >= 2) tryPlay();
       };
 
       if ("IntersectionObserver" in window) {
@@ -2202,9 +2231,17 @@ if (latestRoot) {
             loadAndPlay();
             io.disconnect();
           },
-          { rootMargin: "0px 0px", threshold: 0.35 }
+          { rootMargin: "400px 0px", threshold: 0 }
         );
         io.observe(video);
+        // Top-of-page heroes: kick off immediately if already visible
+        requestAnimationFrame(() => {
+          const rect = video.getBoundingClientRect();
+          if (rect.bottom > 0 && rect.top < window.innerHeight + 400) {
+            loadAndPlay();
+            io.disconnect();
+          }
+        });
       } else {
         loadAndPlay();
       }

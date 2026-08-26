@@ -542,6 +542,10 @@ body.home-page {
   padding: 0 22px 0;
   overflow: hidden;
   background-color: #2a1f18;
+  background-image: url("./Public/architecture/home-hero-poster.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .home-page .home-hero-video {
@@ -558,10 +562,6 @@ body.home-page {
 @media (prefers-reduced-motion: reduce) {
   .home-page .home-hero-video {
     display: none;
-  }
-
-  .home-page .hero {
-    background-image: none;
   }
 }
 
@@ -2067,7 +2067,7 @@ body.home-page .home-faq-section {
   }
 
   .architecture-hero--arch-intero {
-    background-image: url("./Few_new_images/Banner_image.png");
+    background-image: url("./All_Images/builvideo-poster.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2341,8 +2341,10 @@ body.home-page .home-faq-section {
 
 .architecture-hero--arch-intero {
   background-color: #1a1512;
-  background-image: none;
+  background-image: url("./All_Images/builvideo-poster.jpg");
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
 }
 

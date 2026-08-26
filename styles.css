@@ -7540,6 +7540,49 @@ body.portfolio-panel-lightbox-open {
   .interior-page .de-atelier-gargi-portfolio__grid {
     grid-template-columns: 1fr;
   }
+
+  .interior-page .de-atelier-gargi-portfolio__card--sierra .de-atelier-gargi-portfolio__card-top {
+    aspect-ratio: 16 / 10;
+    min-height: 210px;
+  }
+
+  .interior-page .de-atelier-gargi-portfolio__card--sierra .de-atelier-gargi-portfolio__media img {
+    object-fit: cover;
+    object-position: 62% 42%;
+  }
+
+  .interior-page .de-atelier-gargi-portfolio__card--sierra .de-atelier-gargi-portfolio__caption {
+    padding: 14px 16px calc(14px + env(safe-area-inset-bottom, 0px));
+    font-size: 0.95rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  .interior-page .de-atelier-gargi-portfolio__card--sierra .arch-intero-projects-card-panel-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .interior-page .de-atelier-gargi-portfolio__card--sierra .arch-intero-projects-card-panel-figure {
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+  }
+
+  .interior-page .de-atelier-gargi-portfolio__card--sierra .arch-intero-projects-card-panel-figure img {
+    object-position: 62% 42%;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 521px) {
+  .interior-page .de-atelier-gargi-portfolio__card--sierra .de-atelier-gargi-portfolio__media img {
+    object-position: 58% 40%;
+  }
+
+  .interior-page .de-atelier-gargi-portfolio__card--sierra .de-atelier-gargi-portfolio__caption {
+    font-size: 0.82rem;
+    padding: 12px 12px;
+    line-height: 1.28;
+  }
 }
 
 /* Interior page — stacked projects band (full-width, white) */
